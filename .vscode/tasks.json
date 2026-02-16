@@ -1,0 +1,57 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "config-macos-debug",
+            "group": "build",
+            "command": "cmake",
+            "hide": true,
+            "args": [
+                "--preset",
+                "config-macos-debug"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "clean",
+            "group": "build",
+            "command": "rm",
+            "hide": true,
+            "args": [
+                "-rf",
+                "build/CMakeCache.txt",
+                "build/CMakeFiles",
+                "build/dartvm"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "build-macos-debug",
+            "group": "build",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "build",
+                "--preset",
+                "build-macos-debug"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "rebuild-macos-debug",
+            "group": "build",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "build",
+                "--preset",
+                "build-macos-debug"
+            ],
+            "dependsOn": [
+                "clean",
+                "config-macos-debug"
+            ]
+        }
+    ]
+}

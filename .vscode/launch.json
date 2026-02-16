@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceRoot}/build/dartvm",
+            "internalConsoleOptions": "neverOpen",
+            "preLaunchTask": "build-macos-debug"
+        },
+        {
+            "name": "Clean Launch",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceRoot}/build/dartvm",
+            "internalConsoleOptions": "neverOpen",
+            "preLaunchTask": "rebuild-macos-debug"
+        }
+    ]
+}
