@@ -1,6 +1,8 @@
-#include <print>
+#include "bin/run.hpp"
 
-int main() {
-    std::println("Hello, world!");
-    return 0;
+#include <cstdlib>
+
+int main(int argc, const char* argv[]) {
+    dart::bin::run(argc, argv);
+    return EXIT_SUCCESS;
 }

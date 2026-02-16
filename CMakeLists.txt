@@ -8,4 +8,8 @@ project(
     LANGUAGES CXX
 )
 
+add_subdirectory(source/api)
+add_subdirectory(source/bin)
+add_subdirectory(source/platform)
+add_subdirectory(source/utils)
 add_subdirectory(source)
